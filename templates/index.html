@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div>
-        <input type="text" name="api_key" class="inputbox" id="inputbox"/>
-        <input type="text" name="model" class="inputbox" id="inputbox"/>
-        <input type="text" name="user_msg" class="inputbox" id="inputbox"/>
-    </div>
+    <form method="post" class="info_input">
+        <div class="info_input">
+            <p class="text">Your api key</p>
+            <input type="text" name="api_key" class="inputbox" id="inputbox"/>
+            <p class="text">Your model</p>
+            <input type="text" name="model" class="inputbox" id="inputbox"/>
+            <p class="text">Your server url</p>
+            <input type="text" name="server_url" class="inputbox" id="inputbox"/>
+            <input type="submit" name="enters" value="enter" class="enter_info"/>
+        </div>
+    </form>
     
 </body>
 </html>
